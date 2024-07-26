@@ -2,29 +2,8 @@ import {ArrowRightIcon} from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
 import Btn from "./Btn";
-
-const navLink = [
-  {
-    name: "Home",
-    link: "/home",
-  },
-  {
-    name: "Courses",
-    link: "/courses",
-  },
-  {
-    name: "About Us",
-    link: "/about",
-  },
-  {
-    name: "Pricing",
-    link: "/pricing",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
-];
+import ShowNavbar from "./ShowNavbar";
+import {navLink} from "@/utils";
 
 export default function Header() {
   return (
@@ -48,7 +27,7 @@ export default function Header() {
             {navLink.map((nav) => (
               <Link
                 key={nav.name}
-                className="xl:px-6 px-5 xl:py-[14px] py-3 xl:text-[18px] text-sm hover:bg-[#F1F1F3] rounded-lg transition-all"
+                className="xl:px-6 px-5 xl:py-[14px] py-3 xl:text-[18px] text-sm hover:bg-[#E4E4E7] rounded-lg transition-all"
                 href={nav.link}
               >
                 {nav.name}
@@ -60,14 +39,8 @@ export default function Header() {
           <Link href="/sign-up" className="xl:text-lg text-sm hover:underline">
             Sign Up
           </Link>
-          <Btn text="Login" />
-          <Image
-            width={34}
-            height={34}
-            className="block lg:hidden"
-            src="/burger.svg"
-            alt="Menu bar image"
-          />
+          <Btn textColor="#FFFFFF" color="#FF9500" text="Login" />
+          <ShowNavbar />
         </div>
       </header>
       <hr className="lg:mx-[30px] md:mx-[20px] mx-[16px]" />

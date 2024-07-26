@@ -6,4 +6,8 @@
   .max-container {
     @apply max-w-[1860px] w-full mx-auto lg:px-[132px] px-[16px] lg:py-5 py-[14px];
   }
+  html,
+  body {
+    background-color: #f1f1f3;
+  }
 }
