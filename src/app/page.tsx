@@ -1,4 +1,6 @@
 import Benefits from "@/components/Benefits";
+import OurCourses from "@/components/OurCourses";
+import OurTestimonials from "@/components/OurTestimonials";
 import Partners from "@/components/Partners";
 import SiteMainTitle from "@/components/SiteMainTitle";
 import Image from "next/image";
@@ -16,6 +18,8 @@ export default function Home() {
         alt="Video img"
       />
       <Benefits />
+      <OurCourses />
+      <OurTestimonials />
     </main>
   );
 }
