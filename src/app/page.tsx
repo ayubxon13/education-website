@@ -1,4 +1,5 @@
 import Benefits from "@/components/Benefits";
+import Footer from "@/components/Footer";
 import OurCourses from "@/components/OurCourses";
 import OurPricing from "@/components/OurPricing";
 import OurTestimonials from "@/components/OurTestimonials";
@@ -24,6 +25,7 @@ export default function Home() {
       <OurTestimonials />
       <OurPricing />
       <Questions />
+      <Footer />
     </main>
   );
 }
