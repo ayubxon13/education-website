@@ -21,7 +21,7 @@ export default function Questions() {
             support@skillbridge.com
           </p>
           <button className="border border-[#F1F1F3] lg:py-[18px] py-[14px] lg:px-6 px-5  text-[#262626] bg-[#FFFFFF] rounded-lg lg:text-lg text-sm lg:mt-[50px] md:mt-10 mt-5">
-            See All FAQ's
+            See All FAQ&apos;s
           </button>
         </div>
         <div className="w-full grid lg:gap-[120px] gap-[80px]">
