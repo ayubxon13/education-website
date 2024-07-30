@@ -3,7 +3,7 @@ import Btn from "./Btn";
 
 export default function OurPricing() {
   return (
-    <section className="max-container pt-0 lg:mb-[100px] mb-[50px]">
+    <section className="max-container pt-0 lg:mb-[150px] md:mb-[100px] mb-[50px]">
       <div className="2xl:flex block items-end justify-between mb-20">
         <div className="max-w-[1177px] w-full">
           <p className="font-semibold lg:text-[48px] md:text-[38px] text-[28px] text-[#262626]">
@@ -101,7 +101,7 @@ export default function OurPricing() {
               Get Started
             </button>
           </div>
-        </div>{" "}
+        </div>
         <div className="bg-[#FCFCFD] grid rounded-xl border border-[#F1F1F3] lg:px-[30px] md:px-6 px-5 lg:pt-[50px] md:pt-10 pt-[30px] lg:pb-[30px] md:pb-6 pb-5">
           <div className="bg-[#FFF9F0] rounded-md border border-[#FFEACC] text-center lg:py-3 md:py-[10px] py-2 text-[#262626] font-medium lg:text-[22px] md:text-lg text-base">
             Free Plan
