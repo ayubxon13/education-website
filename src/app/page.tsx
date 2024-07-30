@@ -1,7 +1,9 @@
 import Benefits from "@/components/Benefits";
 import OurCourses from "@/components/OurCourses";
+import OurPricing from "@/components/OurPricing";
 import OurTestimonials from "@/components/OurTestimonials";
 import Partners from "@/components/Partners";
+import Questions from "@/components/Questions";
 import SiteMainTitle from "@/components/SiteMainTitle";
 import Image from "next/image";
 
@@ -20,6 +22,8 @@ export default function Home() {
       <Benefits />
       <OurCourses />
       <OurTestimonials />
+      <OurPricing />
+      <Questions />
     </main>
   );
 }
