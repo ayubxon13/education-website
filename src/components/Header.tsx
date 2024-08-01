@@ -7,7 +7,7 @@ import {navLink} from "@/utils";
 
 export default function Header() {
   return (
-    <div>
+    <>
       <div className="bg-[#FF9500] lg:mx-[30px] md:mx-[20px] mx-[16px] rounded-lg mt-5">
         <p className="text-[#FFFFFF] lg:gap-[23px] gap-3 flex items-center justify-center text-center py-[14px] lg:text-lg text-sm">
           Free Courses 🌟 Sale Ends Soon, Get It Now
@@ -44,6 +44,6 @@ export default function Header() {
         </div>
       </header>
       <hr className="lg:mx-[30px] md:mx-[20px] mx-[16px]" />
-    </div>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Btn from "./Btn";
 
-export default function SiteMainTitle() {
+export default function HomeMainTitle() {
   return (
     <div className="grid justify-center mx-8">
       <div className="lg:py-[14px] py-3 lg:px-5 px-3 gap-[10px] justify-start rounded-[11px] bg-[#FCFCFD] flex items-center">
