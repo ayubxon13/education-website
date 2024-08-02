@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Btn from "./Btn";
+import BtnPrimary from "./Btn/BtnPrimary";
+import BtnSecondary from "./Btn/BtnSecondary";
 
 export default function HomeMainTitle() {
   return (
@@ -23,18 +24,9 @@ export default function HomeMainTitle() {
         Learn from Industry Experts and Enhance Your Skills.
       </p>
       <div className="flex gap-3 justify-center lg:mt-[60px] mt-[50px]">
-        <Btn
-          fontW="600"
-          textColor="#FFFFFF"
-          color="#FF9500"
-          text="Explore Courses"
-        />
-        <Btn
-          fontW="500"
-          textColor="#262626"
-          color="#FCFCFD"
-          text="View Pricing"
-        />
+        <BtnPrimary text="Explore Courses" fontW="600" />
+
+        <BtnSecondary text="View Pricing" fontW="500"/>
       </div>
     </div>
   );

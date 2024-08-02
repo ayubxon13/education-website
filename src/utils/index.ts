@@ -1,7 +1,7 @@
 export const navLink = [
   {
     name: "Home",
-    link: "/home",
+    link: "/",
   },
   {
     name: "Courses",
@@ -9,16 +9,16 @@ export const navLink = [
   },
   {
     name: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Pricing",
     link: "/pricing",
   },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
+  // {
+  //   name: "Contact",
+  //   link: "/contact",
+  // },
 ];
 
 export const partnersData = [

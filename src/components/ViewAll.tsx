@@ -1,4 +1,4 @@
-import Btn from "./Btn";
+import BtnPrimary from "./Btn/BtnPrimary";
 
 type thisProps = {
   title: string;
@@ -16,7 +16,7 @@ export default function ViewAll({desc, title}: thisProps) {
           {desc}
         </p>
       </div>
-      <Btn fontW="500" color="#FCFCFD" text="View All" textColor="#59595A" />
+      <BtnPrimary text="Monthly" fontW="500" />
     </div>
   );
 }

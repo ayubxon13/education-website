@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Btn from "./Btn";
-
+import BtnSecondary from "./Btn/BtnSecondary";
 export default function TestimonialsCard() {
   return (
     <div className="bg-[#FFFFFF] rounded-xl border border-[#F1F1F3]">
@@ -23,12 +22,7 @@ export default function TestimonialsCard() {
             Sarah L
           </p>
         </div>
-        <Btn
-          fontW="500"
-          color="#F7F7F8"
-          textColor="#262626"
-          text="Read Full Story"
-        />
+        <BtnSecondary text="Read Full Story"  fontW="500"/>
       </div>
     </div>
   );

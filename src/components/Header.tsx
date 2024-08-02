@@ -1,9 +1,9 @@
 import {ArrowRightIcon} from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
-import Btn from "./Btn";
 import ShowNavbar from "./ShowNavbar";
 import {navLink} from "@/utils";
+import BtnPrimary from "./Btn/BtnPrimary";
 
 export default function Header() {
   return (
@@ -39,7 +39,9 @@ export default function Header() {
           <Link href="/sign-up" className="xl:text-lg text-sm hover:underline">
             Sign Up
           </Link>
-          <Btn textColor="#FFFFFF" color="#FF9500" text="Login" />
+          <Link href="/login">
+            <BtnPrimary text="Login" />
+          </Link>
           <ShowNavbar />
         </div>
       </header>

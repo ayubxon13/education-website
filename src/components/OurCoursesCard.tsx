@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CourseAuthor from "./CourseAuthor";
 
 export default function OurCoursesCard() {
   return (
@@ -10,18 +11,9 @@ export default function OurCoursesCard() {
         alt=""
         src="/coursesImg.png"
       />
-      <div className="sm:flex grid gap-[14px] items-center justify-between lg:mt-[30px] mt-6">
-        <div className="flex gap-[10px] items-center">
-          <p className="lg:py-[10px] py-2 lg:text-lg text-sm lg:px-4 px-[14px] rounded-lg border border-[#F1F1F3]">
-            4 Weeks
-          </p>
-          <p className="lg:py-[10px] py-2 lg:text-lg text-sm lg:px-4 px-[14px] rounded-lg border border-[#F1F1F3]">
-            Beginner
-          </p>
-        </div>
-        <p className="font-medium lg:text-xl sm:text-lg text-sm text-[#262626]">
-          By John Smith
-        </p>
+
+      <div className="lg:my-[30px] my-6">
+        <CourseAuthor />
       </div>
       <div className="grid lg:mt-[30px] mt-6">
         <p className="text-[#262626] lg:mb-[14px] mb-[10px] font-semibold lg:text-2xl sm:text-xl text-lg">
