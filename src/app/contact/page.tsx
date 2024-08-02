@@ -8,7 +8,7 @@ export default function Contact() {
       <CoursesMainTitle />
       <div className="max-container">
         <div className="bg-[#FFFFFF] flex gap-20 justify-between p-20">
-          <div className="grid gap-[30px] w-full">
+          {/* <div className="grid gap-[30px] w-full">
             <div className="grid gap-[30px] grid-cols-2">
               <Input />
               <Input />
@@ -17,7 +17,7 @@ export default function Contact() {
             </div>
             <Input />
             <Input />
-          </div>
+          </div> */}
           <div className="grid gap-[50px]">
             <div className="bg-[#FCFCFD] border border-[#F1F1F3] w-[360px] rounded-lg h-min py-7">
               <div className="grid gap-5 justify-center justify-items-center">
