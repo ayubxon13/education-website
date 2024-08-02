@@ -24,8 +24,8 @@ export default function CoursesSinglePage() {
                 Introduction to UI/UX Design
               </p>
               <div className="grid gap-5 lg:mt-[50px] md:mt-10 mt-[30px]">
-                {Array.from({length: 4}).map(() => (
-                  <div className="border border-[#F1F1F3] rounded-lg lg:py-6 py-5 lg:px-[30px] px-6">
+                {Array.from({length: 4}).map((_idx) => (
+                  <div key={idx} className="border border-[#F1F1F3] rounded-lg lg:py-6 py-5 lg:px-[30px] px-6">
                     <div className="md:flex grid gap-y-6 items-center justify-between">
                       <div className="grid gap-[6px]">
                         <p className="text-[#333333] font-medium lg:text-xl text-base">

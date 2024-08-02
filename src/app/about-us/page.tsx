@@ -47,8 +47,11 @@ export default function AboutUs() {
           achievements
         </p>
         <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-[30px] gap-5 md:mb-20 mb-[60px]">
-          {Array.from({length: 4}).map(() => (
-            <div className="bg-[#FFFFFF] lg:p-[50px] md:p-10 p-[30px] rounded-xl">
+          {Array.from({length: 4}).map((_, idx) => (
+            <div
+              key={idx}
+              className="bg-[#FFFFFF] lg:p-[50px] md:p-10 p-[30px] rounded-xl"
+            >
               <div className="border border-[#FFEACC] w-max rounded-lg bg-[#FFF9F0] lg:p-4 p-[14px]">
                 <Image
                   className="lg:w-[34px] lg:h-[34px] w-7 h-7"
@@ -73,8 +76,8 @@ export default function AboutUs() {
         <div className="bg-[#FFFFFF] lg:mb-[150px] md:mb-[100px] mb-[50px] xl:flex justify-between items-center lg:p-20 md:p-[60px] p-[30px] bg-no-repeat bg-right rounded-xl">
           <div className="xl:mb-0 mb-10">
             <p className="font-semibold lg:text-[48px] md:text-[38px] text-[28px] text-[#262626]">
-              <span className="text-[#FF9500]">Together</span>, let's shape the
-              future of digital innovation
+              <span className="text-[#FF9500]">Together</span>, let&apos;s shape
+              the future of digital innovation
             </p>
             <p className="text-[#4C4C4D] lg:text-lg md:text-base text-sm lg:mt-5 md:mt-[14px] mt-[10px]">
               Join us on this exciting learning journey and unlock your
