@@ -1,3 +1,4 @@
+import {ArrowLeftIcon, ArrowRightIcon} from "@heroicons/react/20/solid";
 import Image from "next/image";
 
 export default function StudentsTestimonials() {
@@ -20,13 +21,27 @@ export default function StudentsTestimonials() {
         <hr />
         <div className="lg:px-[50px] md:px-10 px-[30px] flex items-center justify-between lg:py-[30px] md:py-6 py-5">
           <div className="flex items-center lg:gap-[15px] gap-[10px]">
-            <Image className="lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]" width={60} height={60} src="/userImg.png" alt="user img" />
+            <Image
+              className="lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
+              width={60}
+              height={60}
+              src="/userImg.png"
+              alt="user img"
+            />
             <p className="font-semibold lg:text-lg text-[#333333]">Sarah L</p>
           </div>
-          <button className="bg-[#F7F7F8] border border-[#F1F1F3] font-medium lg:text-lg lg:py-[18px] text-sm py-[14px] lg:px-6 px-[16px] rounded-lg">
+          <button className="bg-[#F7F7F8] hover:bg-opacity-65 active:bg-[#E0E0E0] border border-[#F1F1F3] font-medium lg:text-lg lg:py-[18px] text-sm py-[14px] lg:px-6 px-[16px] rounded-lg">
             Read More
           </button>
         </div>
+      </div>
+      <div className="justify-end w-full flex gap-[15px] mt-[30px]">
+        <button className="p-[14px] hover:bg-opacity-65 active:bg-[#E0E0E0] bg-[#FFFFFF] rounded-lg border border-[#F1F1F3]">
+          <ArrowLeftIcon className="w-[24px] h-[24px]" />
+        </button>
+        <button className="p-[14px] hover:bg-opacity-65 active:bg-[#E0E0E0] bg-[#FFFFFF] rounded-lg border border-[#F1F1F3]">
+          <ArrowRightIcon className="w-[24px] h-[24px]" />
+        </button>
       </div>
     </div>
   );

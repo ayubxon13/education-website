@@ -9,7 +9,7 @@ export default function Pricing() {
     <>
       <CoursesMainTitle />
       <div className="max-container">
-        <div className="p-3 bg-[#FFFFFF] mx-auto md:mb-[50px] mb-10 w-min flex rounded-lg">
+        <div className="p-3 bg-[#FFFFFF] gap-2 mx-auto md:mb-[50px] mb-10 w-min flex rounded-lg">
           <BtnPrimary text="Monthly" fontW="500" />
           <BtnSecondary text="Yearly" fontW="500" />
         </div>

@@ -16,7 +16,7 @@ export default function OurPricing() {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="p-3 bg-[#FFFFFF] w-min flex rounded-lg">
+        <div className="p-3 bg-[#FFFFFF] gap-2 w-min flex rounded-lg">
           <BtnPrimary fontW="500" text="Monthly" />
           <BtnSecondary text="Yearly" fontW="500" />
         </div>

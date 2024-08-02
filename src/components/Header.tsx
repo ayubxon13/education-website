@@ -36,7 +36,7 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex gap-[30px] items-center">
-          <Link href="/sign-up" className="xl:text-lg text-sm hover:underline">
+          <Link href="/sign" className="xl:text-lg text-sm hover:underline">
             Sign Up
           </Link>
           <Link href="/login">

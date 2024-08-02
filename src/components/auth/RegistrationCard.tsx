@@ -13,27 +13,20 @@ export default function RegistrationCard() {
         Welcome back! Please log in to access your account.
       </p>
       <div className="grid lg:gap-6 gap-5">
-        <div className="grid lg:gap-y-[14px] gap-y-[10px]">
-          <p className="text-[#262626] font-medium lg:text-lg md:text-base text-sm">
-            Email
-          </p>
-          <input
-            placeholder="Enter your Email"
-            className="bg-[#FCFCFD] w-full lg:text-lg md:text-base text-sm rounded-[10px] lg:p-6 p-5 border border-[#F1F1F3]"
-            type="text"
-          />
-        </div>
+        <Input name="email" placeHolder="Enter your Email" title="Email" />
 
-        <Input />
-
-        <Input />
+        <Input
+          name="password"
+          placeHolder="Enter your Password"
+          title="password"
+        />
         <BtnPrimary text="Login" fontW="500" />
         <div className="flex gap-3 text-[#98989A] items-center">
           <hr className="w-full" />
           <p className="lg:text-lg text-sm">OR</p>
           <hr className="w-full" />
         </div>
-        <button className="bg-[#F7F7F8] flex items-center justify-center gap-[14px] border border-[#F1F1F3] w-full rounded-[10px] text-[#262626] lg:py-[18px] py-4 font-medium lg:text-lg text-sm">
+        <button className="bg-[#F7F7F8] hover:bg-opacity-65 active:bg-[#E0E0E0] transition-all flex items-center justify-center gap-[14px] border border-[#F1F1F3] w-full rounded-[10px] text-[#262626] lg:py-[18px] py-4 font-medium lg:text-lg text-sm">
           <Image src="/google.svg" width={30} height={30} alt="google icon" />
           Login with Google
         </button>

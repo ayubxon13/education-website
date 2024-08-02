@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CoursePriceCard() {
   return (
@@ -79,17 +80,19 @@ export default function CoursePriceCard() {
               </p>
             </div>
           </div>
-          <button className="bg-[#FF9500] rounded-b-lg text-[#FFFFFF] font-semibold lg:text-lg text-sm lg:py-5 py-[18px] w-full">
-            Get Started
-          </button>
+          <Link href="/courses">
+            <button className="bg-[#FF9500] hover:bg-opacity-75 active:bg-[#E68A00] transition-all rounded-b-lg text-[#FFFFFF] font-semibold lg:text-lg text-sm lg:py-5 py-[18px] w-full">
+              Get Started
+            </button>
+          </Link>
         </div>
-      </div>{" "}
+      </div>
       <div className="bg-[#FCFCFD] grid rounded-xl border border-[#F1F1F3] lg:px-[30px] md:px-6 px-5 lg:pt-[50px] md:pt-10 pt-[30px] lg:pb-[30px] md:pb-6 pb-5">
         <div className="bg-[#FFF9F0] rounded-md border border-[#FFEACC] text-center lg:py-3 md:py-[10px] py-2 text-[#262626] font-medium lg:text-[22px] md:text-lg text-base">
           Free Plan
         </div>
         <p className="font-semibold lg:text-[80px] md:text-6xl text-[50px] text-[#262626] text-center lg:mt-[50px] mt-[30px]">
-          $0
+          $99
           <span className="font-medium lg:text-xl md:text-base text-sm text-[#4C4C4D]">
             /month
           </span>
@@ -160,9 +163,11 @@ export default function CoursePriceCard() {
               </p>
             </div>
           </div>
-          <button className="bg-[#FF9500] rounded-b-lg text-[#FFFFFF] font-semibold lg:text-lg text-sm lg:py-5 py-[18px] w-full">
-            Get Started
-          </button>
+          <Link href="/courses">
+            <button className="bg-[#FF9500] hover:bg-opacity-75 active:bg-[#E68A00] transition-all rounded-b-lg text-[#FFFFFF] font-semibold lg:text-lg text-sm lg:py-5 py-[18px] w-full">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>
