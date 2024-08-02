@@ -1,5 +1,4 @@
 import CoursesMainTitle from "@/components/CoursesMainTitle";
-import Input from "@/components/Input";
 import {EnvelopeIcon} from "@heroicons/react/20/solid";
 
 export default function Contact() {
