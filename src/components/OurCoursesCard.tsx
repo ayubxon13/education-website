@@ -9,7 +9,7 @@ export default function OurCoursesCard() {
         width={683}
         height={380}
         alt=""
-        src="/coursesImg.png"
+        src="/courseImg.png"
       />
 
       <div className="lg:my-[30px] my-6">
