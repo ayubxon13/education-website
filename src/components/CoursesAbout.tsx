@@ -1,10 +1,24 @@
+"use client";
 import Image from "next/image";
 import CourseAuthor from "./CourseAuthor";
 import Link from "next/link";
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
+import NumCount from "./NumCount";
 
 export default function CoursesAbout() {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
   return (
-    <section className="max-container pt-0 mb-[50px]">
+    <motion.div
+      ref={ref}
+      initial={{opacity: 0, y: 50}}
+      animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
+      transition={{duration: 0.7}}
+      className="max-container pt-0 mb-[50px]"
+    >
       <div className="bg-[#FFFFFF] rounded-xl">
         <div className="lg:p-[50px] md:p-10 p-6">
           <div className="grid items-end">
@@ -78,6 +92,6 @@ export default function CoursesAbout() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.div>
   );
 }

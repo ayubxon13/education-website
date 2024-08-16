@@ -1,6 +1,20 @@
+"use client";
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
+
 export default function CoursesMainTitle() {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
   return (
-    <div className="md:flex grid gap-y-4 justify-between gap-x-11 border-b border-[#E4E4E7] md:pb-10 pb-[30px] pt-0 max-container lg:my-[100px] md:my-20 my-[50px]">
+    <motion.div
+      ref={ref}
+      initial={{opacity: 0, y: 50}}
+      animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
+      transition={{duration: 0.7}}
+      className="md:flex grid gap-y-4 justify-between gap-x-11 border-b border-[#E4E4E7] md:pb-10 pb-[30px] pt-0 max-container lg:my-[100px] md:my-20 my-[50px]"
+    >
       <h1 className="text-[#262626] font-semibold lg:text-5xl md:text-[38px] text-[28px] lg:leading-[72px] md:leading-[57px] leading-[42px] max-w-[748px] w-full">
         Online Courses on Design and Development
       </h1>
@@ -11,6 +25,6 @@ export default function CoursesMainTitle() {
         practical experience. Explore the courses below and find the perfect fit
         for your learning journey.
       </p>
-    </div>
+    </motion.div>
   );
 }

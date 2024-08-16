@@ -1,10 +1,24 @@
+"use client";
 import Image from "next/image";
 import BtnPrimary from "./Btn/BtnPrimary";
 import BtnSecondary from "./Btn/BtnSecondary";
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
 
 export default function HomeMainTitle() {
+  const [ref, inView] = useInView({
+    threshold: 0.1, 
+    triggerOnce: false,
+  });
+
   return (
-    <div className="grid justify-center mx-8">
+    <motion.div
+      ref={ref}
+      initial={{opacity: 0, y: 50}}
+      animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
+      transition={{duration: 0.7}}
+      className="grid justify-center mx-8"
+    >
       <div className="lg:py-[14px] py-3 lg:px-5 px-3 gap-[10px] justify-start rounded-[11px] bg-[#FCFCFD] flex items-center">
         <Image
           className="lg:w-[62px] lg:h-[62px] w-12 h-12"
@@ -26,8 +40,8 @@ export default function HomeMainTitle() {
       <div className="flex gap-3 justify-center lg:mt-[60px] mt-[50px]">
         <BtnPrimary text="Explore Courses" fontW="600" />
 
-        <BtnSecondary text="View Pricing" fontW="500"/>
+        <BtnSecondary text="View Pricing" fontW="500" />
       </div>
-    </div>
+    </motion.div>
   );
 }

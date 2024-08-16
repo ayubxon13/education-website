@@ -1,22 +1,46 @@
+"use client";
 import {benefitsCardData} from "@/utils";
 import BenefitsCard from "./BenefitsCard";
 import ViewAll from "./ViewAll";
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
 
 export default function Benefits() {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const itemVariants = {
+    hidden: {opacity: 0, y: 50},
+    visible: {opacity: 1, y: 0},
+  };
+
   return (
     <section className="max-container pt-0 lg:mb-[100px] mb-[50px]">
       <ViewAll
         title="Benefits"
         desc="Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in."
       />
-      <div className="grid 2xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+      <div
+        ref={ref}
+        className="grid 2xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5"
+      >
         {benefitsCardData.map((item, idx) => (
-          <BenefitsCard
+          <motion.div
             key={item.title}
-            desc={item.description}
-            idx={idx + 1}
-            title={item.title}
-          />
+            className="flex"
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={itemVariants}
+            transition={{duration: 0.5, delay: idx * 0.2}}
+          >
+            <BenefitsCard
+              desc={item.description}
+              idx={idx + 1}
+              title={item.title}
+            />
+          </motion.div>
         ))}
       </div>
     </section>

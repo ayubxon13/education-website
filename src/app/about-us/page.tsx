@@ -1,12 +1,31 @@
+"use client";
+import {motion} from "framer-motion";
+import {useInView} from "react-intersection-observer";
 import BtnPrimary from "@/components/Btn/BtnPrimary";
 import CoursesMainTitle from "@/components/CoursesMainTitle";
 import Image from "next/image";
 
 export default function AboutUs() {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const itemVariants = {
+    hidden: {opacity: 0, y: 50},
+    visible: {opacity: 1, y: 0},
+  };
+
   return (
     <>
       <CoursesMainTitle />
-      <div className="max-container">
+      <motion.div
+        ref={ref}
+        initial={{opacity: 0, y: 50}}
+        animate={inView ? {opacity: 1, y: 0} : {opacity: 0, y: 50}}
+        transition={{duration: 0.7}}
+        className="max-container"
+      >
         <h3 className="font-medium text-5xl text-[#333333]">Achievements</h3>
         <p className="text-lg text-[#59595A] mt-[6px] mb-20">
           Our commitment to excellence has led us to achieve significant
@@ -15,8 +34,12 @@ export default function AboutUs() {
         </p>
         <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-[30px] gap-5 mb-[177px]">
           {Array.from({length: 4}).map((_, idx) => (
-            <div
+            <motion.div
               key={idx}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={itemVariants}
+              transition={{duration: 0.5, delay: idx * 0.2}}
               className="bg-[#FFFFFF] lg:p-[50px] md:p-10 p-[30px] rounded-xl"
             >
               <div className="border border-[#FFEACC] w-max rounded-lg bg-[#FFF9F0] lg:p-4 p-[14px]">
@@ -37,7 +60,7 @@ export default function AboutUs() {
                   them unlock their potential and achieve their career goals.
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <h3 className="font-medium text-5xl text-[#333333]">Achievements</h3>
@@ -86,7 +109,7 @@ export default function AboutUs() {
           </div>
           <BtnPrimary text="Join Now" fontW="600" />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
