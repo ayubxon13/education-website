@@ -1,26 +1,16 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import CountUp from "react-countup";
 import {motion} from "framer-motion";
 import {useInView} from "react-intersection-observer";
-import {useEffect, useState} from "react";
 import NumCount from "./NumCount";
 
 export default function CoursePriceCard() {
-  const [shouldAnimate, setShouldAnimate] = useState(false);
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: false,
   });
 
-  useEffect(() => {
-    if (inView) {
-      setShouldAnimate(true);
-    } else {
-      setShouldAnimate(false);
-    }
-  }, [inView]);
   const itemVariants = {
     hidden: {opacity: 0, y: 50},
     visible: {opacity: 1, y: 0},
