@@ -13,6 +13,9 @@ const inter = Be_Vietnam_Pro({
 export const metadata: Metadata = {
   title: "Education learning",
   description: "Education learning for website",
+  icons: {
+    icon: "/favicon.png"
+  }
 };
 
 export default function RootLayout({
