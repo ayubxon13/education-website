@@ -4,6 +4,7 @@ import BtnPrimary from "./Btn/BtnPrimary";
 import BtnSecondary from "./Btn/BtnSecondary";
 import {motion} from "framer-motion";
 import {useInView} from "react-intersection-observer";
+import {ReactTyped} from "react-typed";
 
 export default function HomeMainTitle() {
   const [ref, inView] = useInView({
@@ -28,7 +29,13 @@ export default function HomeMainTitle() {
           alt="Flash icon"
         />
         <h1 className="font-semibold lg:text-5xl sm:text-3xl text-base">
-          <span className="text-[#FF9500]">Unlock</span> Your Creative Potential
+          <span className="text-[#FF9500]">Unlock</span>{" "}
+          <ReactTyped
+            backSpeed={10}
+            strings={["Your Creative Potential"]}
+            typeSpeed={60}
+            loop
+          />
         </h1>
       </div>
       <p className="text-center text-[#262626] lg:text-[38px] sm:text-[28px] text-2xl font-medium lg:mt-5 mt-4">

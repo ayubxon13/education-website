@@ -6,10 +6,10 @@ import {motion} from "framer-motion";
 import {useInView} from "react-intersection-observer";
 
 export default function Questions() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   const [ref, inView] = useInView({
@@ -51,9 +51,10 @@ export default function Questions() {
                 animate={inView ? "visible" : "hidden"}
                 variants={itemVariants}
                 transition={{duration: 0.5, delay: idx * 0.2}}
-                className="border border-[#F1F1F3] text-start w-full lg:py-10 md:py-8 py-5 lg:px-[50px] md:px-10 px-6 rounded-xl"
+                onClick={() => toggleAccordion(idx)}
+                className="border border-[#F1F1F3] transition-all hover:bg-[#f6f6f6] active:bg-[#f6f6f6] cursor-pointer text-start w-full lg:py-10 md:py-8 py-5 lg:px-[50px] md:px-10 px-6 rounded-xl"
               >
-                <button className="w-full" onClick={toggleAccordion}>
+                <div className="w-full">
                   <div className="flex justify-between md:gap-10 gap-5 w-full text-start items-center">
                     <p className="text-[#262626] lg:text-xl md:text-lg text-base font-medium">
                       Can I enroll in multiple courses at once?
@@ -62,14 +63,16 @@ export default function Questions() {
                       className="lg:w-[52px] lg:h-[52px] md:w-11 md:h-11 w-10 h-10"
                       width={52}
                       height={52}
-                      src={isOpen ? "/xbtn.png" : "/addbtn.png"}
-                      alt={isOpen ? "Close" : "Open"}
+                      src={openIndex === idx ? "/xbtn.png" : "/addbtn.png"}
+                      alt={openIndex === idx ? "Close" : "Open"}
                     />
                   </div>
-                </button>
+                </div>
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                    openIndex === idx
+                      ? "max-h-screen opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   <hr className="lg:my-9 my-7" />
