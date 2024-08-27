@@ -42,6 +42,7 @@ export default function ShowNavbar() {
         <nav className="flex flex-col space-y-4 text-center">
           {navLink.map((link) => (
             <Link
+              onClick={() => setShow(false)}
               key={link.name}
               className="hover:text-[#FF9500]"
               href={link.link}
